@@ -1,8 +1,6 @@
 <!DOCTYPE html> 
 <html lang="en">
 <head>
-
-</head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,6 +10,41 @@
     <meta name="keywords" content="site, project, code">
     <meta name="description" content="">
     <meta name="author" content="">
+</head>
+<body>
 
 <h1>My Name is Montique Stevens and my favorite hobby is drawing</h1>
+<br>
+<h1>The Current Time is:</h1> 
+ 
+<script>function display_ct7() {
+var x = new Date();
+var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM'; //12 hr format
+hours = x.getHours( ) % 12;
+hours = hours ? hours : 12;
+hours=hours.toString().length==1? 0+hours.toString() : hours; // add zero when single digit for hr
+
+var minutes=x.getMinutes().toString()
+minutes=minutes.length==1 ? 0+minutes : minutes; // add zero when single digit for min
+
+var seconds=x.getSeconds().toString()
+seconds=seconds.length==1 ? 0+seconds : seconds; // add zero when single digit for sec
+
+x1 = hours + ":" +  minutes + ":" +  seconds + " " + ampm; //display time
+document.getElementById('ct7').innerHTML = x1;
+display_c7();
+ }
+ function display_c7(){
+var refresh=1000; // Refresh rate in milli seconds
+mytime=setTimeout('display_ct7()',refresh)
+}
+display_c7()
+</script>
+<span id='ct7' style="background-color: red; font-weight: bold; color: #000000; font-size: x-large;"></span> 
+
+
+</body>
+
+<h1></h1>
+<h1><h1>
 </html>
